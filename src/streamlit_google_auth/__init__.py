@@ -98,7 +98,7 @@ class Authenticate:
                     st.session_state["oauth_id"] = user_info.get("id")
                     st.session_state["user_info"] = user_info
                     self.cookie_handler.set_cookie(user_info.get("name"), user_info.get("email"), user_info.get("picture"), user_info.get("id"))
-                    st.rerun()
+                    # st.rerun() https://github.com/MrBounty/streamlit-google-auth/pull/5
     
     def logout(self):
         st.session_state['logout'] = True
